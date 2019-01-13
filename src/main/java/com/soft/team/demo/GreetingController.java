@@ -28,7 +28,10 @@ public class GreetingController {
                 String.format(template, "Vacio"));
     }
 
-
+    @PostMapping(value = "/save")
+    public Greeting saveGreeting(@RequestBody Greeting greeting) {
+        return greeting;
+    }
 
 
 }
